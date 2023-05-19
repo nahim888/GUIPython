@@ -40,7 +40,7 @@ def get_dataframe():
     # Adjusting the width of the columns based on the content
     for column in columns:
         treeview.column(column, width=tk.FIXED)
-#commento prova
+
 # bottone
 download_button = tk.Button(text="CLICCA QUI", command=get_dataframe)
 download_button.grid(row=0, column=0, sticky="WE", pady=10, padx=10)
