@@ -15,7 +15,7 @@ window.geometry("%dx%d" % (width, height))
 
 window.title("PROVA")
 window.grid_columnconfigure(0, weight=1)
-
+#
 
 def get_dataframe():
     result_frame = tk.LabelFrame(window, text="Risultato", padx=10, pady=10)
