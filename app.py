@@ -15,7 +15,7 @@ window.geometry("%dx%d" % (width, height))
 
 window.title("PROVA")
 window.grid_columnconfigure(0, weight=1)
-#
+
 
 def get_dataframe():
     result_frame = tk.LabelFrame(window, text="Risultato", padx=10, pady=10)
@@ -32,7 +32,7 @@ def get_dataframe():
     for column in columns:
         treeview.column(column, anchor=tk.CENTER)
         treeview.heading(column, text=column)
-
+#y
     # Inserting data into treeview
     for index, row in df.iterrows():
         treeview.insert("", tk.END, text=index, values=list(row))
