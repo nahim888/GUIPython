@@ -31,6 +31,8 @@ text_input.grid(row=1, column=0, sticky="WE", padx=10)
 download_button = tk.Button(text="CLICCA QUI", command=getnome)
 download_button.grid(row=2, column=0, sticky="WE", pady=10, padx=10)
 
+#ZIOESPARTATOREDIPATATEBOLIVIANE
+
 
 if __name__ == "__main__":
     window.mainloop()
