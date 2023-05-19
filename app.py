@@ -42,7 +42,7 @@ def get_dataframe():
     for column in columns:
         treeview.column(column, anchor=tk.CENTER)#L'ancoraggio al centro (anchor=tk.CENTER) si riferisce alla posizione di allineamento del contenuto all'interno di una colonna della Treeview.
         treeview.heading(column, text=column)
-#y
+
     # Viene inserito il contenuto del dataframe all'interno di treeview. Viene iterato su ogni riga del dataframe utilizzando il metodo iterrows()
     for index, row in df.iterrows():
         treeview.insert("", tk.END, text=index, values=list(row))
