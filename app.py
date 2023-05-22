@@ -50,6 +50,26 @@ def get_dataframe():
     #Viene regolata la larghezza delle colonne in base al contenuto.
     for column in columns:
         treeview.column(column, width=tk.FIXED)
+        
+def delete_user(index):
+    # Open a connection to the database
+    conn = pymssql.connect(server='192.168.40.16\SQLEXPRESS', user='ahmed.nahim', password='xxx123##', database='ahmed.nahim')
+    cursor = conn.cursor()
+
+    # Get the user ID based on the selected row index
+    user_id = df.loc[index, 'ID']
+
+    # Execute the delete query for the specific user
+    delete_query = f"DELETE FROM Utente WHERE ID={user_id}"
+    cursor.execute(delete_query)
+    conn.commit()
+
+    # Update the dataframe after deletion
+    df.drop(index, inplace=True)
+
+    # Close the database connection
+    cursor.close()
+    conn.close()
 
 # Viene creato un oggetto Button chiamato download_button con il testo "CLICCA QUI" e il comando get_dataframe() associato al click del pulsante.
 download_button = tk.Button(text="CLICCA QUI", command=get_dataframe)
